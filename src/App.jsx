@@ -1,11 +1,13 @@
 import './App.css'
+import BackgroundVideoBanner from './Pokemon-project/BackgroundVideoBanner'
+
 
 function App() {
-
+  
 
   return (
     <>
-    <h2>Pikachu mai tumhe chunta hu</h2>
+     <BackgroundVideoBanner/>
     </>
   )
 }
