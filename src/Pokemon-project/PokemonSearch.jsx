@@ -3,7 +3,7 @@ import '../Pokemon.css';
 import SearchBar from './SearchBar';
 import PokemonCard from './PokemonCard';
 import SearchHistory from './SearchHistory';
-
+import { Link } from 'react-router-dom';
 const PokemonSearch = () => {
   const [pokemonName, setPokemonName] = useState('');
   const [pokemonData, setPokemonData] = useState(null);
@@ -155,20 +155,22 @@ const PokemonSearch = () => {
   //   setCompareData(null);
   // };
   return (
+    <div className="app-and-history">
     <div className="pokemon-app">
+  
+      {/* <div className="pokemon-ball"></div> */}
       <div className="app-header">
         <h1 className="app-title">
           <span className="title-icon">⚡</span>
           Pokémon Finder
           <span className="title-icon">⚡</span>
         </h1>
-        <p className="app-subtitle">Discover your favorite Pokémon!</p>
+
       </div>
 
       <SearchBar
         pokemonName={pokemonName}
         setPokemonName={setPokemonName}
-        
         selectedType={selectedType}
         setSelectedType={setSelectedType}
         handleSearch={handleSearch}
@@ -226,6 +228,7 @@ const PokemonSearch = () => {
           </button>
         </div>
       )} */}
+    </div>
       {searchHistory.length > 0 && (
         <SearchHistory
           searchHistory={searchHistory}
@@ -233,7 +236,7 @@ const PokemonSearch = () => {
         />
      
       )}
-    </div>
+      </div>
   );
 };
 
